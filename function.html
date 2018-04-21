@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body {
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+
+    input {
+        border: 2px solid grey;
+        border-radius: 5px;
+        padding: 20px;
+        font-size: 36px;
+    }
+    
+    </style>
+</head>
+<body>
+    <h1 class="message"></h1>
+<input type="text" placeholder="Write your name to say hello">
+<script>
+    function sayHello() {
+        var input = document.querySelector('input');
+        var name = input.value;
+        var message = document.querySelector('.message');
+        message.textContent = `Hey ${name}, how are you?`;
+    }
+
+    document.addEventListener('click', sayHello);
+</script>
+</body>
+</html>
